@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -22,10 +23,11 @@ class ProfilePage extends ConsumerWidget {
       appBar: AppBar(title: const Text('我的')),
       body: ListView(
         children: [
-          const Padding(
-            padding: EdgeInsets.all(16),
-            child: AvatarEditor(),
-          ),
+          if (!kIsWeb)
+            const Padding(
+              padding: EdgeInsets.all(16),
+              child: AvatarEditor(),
+            ),
           const NicknameTile(),
           const Divider(),
           _SectionHeader(text: '个性化'),
