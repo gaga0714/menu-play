@@ -1,0 +1,41 @@
+name: menu_play
+description: "吃啥 — 决定吃什么的转盘小工具"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # 状态管理
+  flutter_riverpod: ^2.5.0
+
+  # 本地存储
+  shared_preferences: ^2.2.0
+
+  # 文件选择（头像，跨平台）
+  file_picker: ^8.0.0
+
+  # 文件路径（保存头像到本地）
+  path_provider: ^2.1.0
+  path: ^1.9.0
+
+  # 菜品 id
+  uuid: ^4.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  # v1 不引入 assets。
+  # 自定义音效（如需）：取消注释下方，并放置文件到 assets/sounds/。
+  # assets:
+  #   - assets/sounds/
