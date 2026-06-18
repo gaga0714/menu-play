@@ -61,7 +61,7 @@ class WheelController {
     final normalizedCurrent = currentAngle % (2 * pi);
     var delta = (target - normalizedCurrent) % (2 * pi);
     if (delta <= 0) delta += 2 * pi;
-    final endAngle = currentAngle + 2 * pi * turns + delta;
+    final endAngle = currentAngle + 2 * pi * turns.floorToDouble() + delta;
 
     return SpinPlan(
       displayed: displayed,
